@@ -1,9 +1,11 @@
 import React from "react";
 
-const Main = () => {
+const Main = ({ children }) => {
 
   return(
-    <main></main>
+    <main>
+      {children}
+    </main>
   )
 };
 
