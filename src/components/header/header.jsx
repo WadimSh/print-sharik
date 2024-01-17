@@ -3,7 +3,9 @@ import React from "react";
 const Header = () => {
 
   return(
-    <header></header>
+    <header>
+      <a href="#">logo</a>
+    </header>
   )
 };
 
