@@ -1,10 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 
 import Header from './components/header/header';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
 
-function App() {
+const App:FC = () => {
   const print = 'print-sharik';
 
   return (
