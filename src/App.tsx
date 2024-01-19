@@ -3,15 +3,17 @@ import { FC } from 'react';
 import Header from './components/header/header';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
+import SharikDemo from './components/sharik-demo/sharik-demo';
+import SharikConstructor from './components/sharik-constructor/sharik-constructor';
 
 const App:FC = () => {
-  const print = 'print-sharik';
-
+  
   return (
     <div className="App">
       <Header />
       <Main>
-        {print}
+        <SharikDemo />
+        <SharikConstructor />
       </Main>
       <Footer />
     </div>

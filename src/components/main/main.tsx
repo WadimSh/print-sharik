@@ -3,7 +3,7 @@ import { FC, PropsWithChildren } from "react";
 const Main:FC<PropsWithChildren> = ({ children }) => {
 
   return(
-    <main>
+    <main style={{ display: "flex" }}>
       {children}
     </main>
   )
