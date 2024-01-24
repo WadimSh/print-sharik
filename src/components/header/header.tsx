@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import style from "./header.module.css";
-import logo from "./tm04.png";
+import logo from "../../assets/images/tm04.png";
 
 const Header:FC = () => {
 
