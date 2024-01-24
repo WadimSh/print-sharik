@@ -7,7 +7,7 @@ import MainPage from './pages/main-page';
 const App:FC = () => {
   
   return (
-    <div className="App">
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <Header />
       <MainPage />
       <Footer />
