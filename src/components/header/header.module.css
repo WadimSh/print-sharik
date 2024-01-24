@@ -4,9 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px;
+  padding: var(--inner-small);
   box-sizing: border-box;
-  box-shadow: 0px 8px 32px 0px rgba(51, 38, 174, 0.08);
+  box-shadow: 0px var(--inner-small) var(--inner-margim) 0px rgba(51, 38, 174, 0.08);
 }
 
 .logo {

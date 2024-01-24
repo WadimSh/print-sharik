@@ -6,4 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+
+  --inner-margim: clamp(0.25rem, 0.036rem + 1.071vw, 1rem);
+  --inner-small: clamp(0.125rem, 0.018rem + 0.536vw, 0.5rem);
+  --inner-normal: clamp(0.75rem, 0.536rem + 1.071vw, 1.5rem);
 }

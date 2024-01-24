@@ -4,9 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: var(--inner-normal);
   box-sizing: border-box;
-  box-shadow: 0px 8px 32px 0px rgba(51, 38, 174, 0.08);
 }
 
 .copi {

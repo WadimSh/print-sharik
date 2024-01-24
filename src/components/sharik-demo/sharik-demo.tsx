@@ -6,7 +6,7 @@ const SharikDemo:FC = () => {
 
   return (
     <section className={style.section}>
-
+      
     </section>
   )
 }
