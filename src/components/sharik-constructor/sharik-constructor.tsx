@@ -1,9 +1,11 @@
 import { FC } from "react";
 
+import style from "./sharik-constructor.module.css";
+
 const SharikConstructor:FC = () => {
 
   return (
-    <section style={{ width: "50%" }}>
+    <section className={style.section}>
 
     </section>
   )

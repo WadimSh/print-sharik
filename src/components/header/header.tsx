@@ -7,7 +7,7 @@ const Header:FC = () => {
 
   return(
     <header className={style.header}>
-      <a href="#">
+      <a href="https://new.sharik.ru/" target="_blank">
         <img src={logo} className={style.logo} />
       </a>
     </header>
