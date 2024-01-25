@@ -1,8 +1,10 @@
 .section {
   margin: var(--inner-margim) var(--inner-margim) var(--inner-margim) var(--inner-small);
-  width: 40%;
+  width: 30%;
   border-radius: var(--inner-margim);
   background: #fff;
   box-shadow: 0px var(--inner-small) var(--inner-margim) 0px rgba(51, 38, 174, 0.08);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
