@@ -1,5 +1,5 @@
 .section {
   margin: var(--inner-margim) var(--inner-small) var(--inner-margim) var(--inner-margim);
-  width: 70%;
+  width: 65%;
   box-sizing: border-box;
 }

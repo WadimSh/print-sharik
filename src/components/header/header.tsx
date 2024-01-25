@@ -7,9 +7,11 @@ const Header:FC = () => {
 
   return(
     <header className={style.header}>
-      <a href="https://new.sharik.ru/" target="_blank">
-        <img src={logo} className={style.logo} />
-      </a>
+      <nav className={style.wrapper}>
+        <a href="https://new.sharik.ru/" target="_blank">
+          <img src={logo} className={style.logo} />
+        </a>
+      </nav>
     </header>
   )
 };

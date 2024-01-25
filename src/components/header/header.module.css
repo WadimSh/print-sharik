@@ -4,9 +4,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--inner-small);
   box-sizing: border-box;
+  background-color: #fff;
   box-shadow: 0px var(--inner-small) var(--inner-margim) 0px rgba(51, 38, 174, 0.08);
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1216px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
