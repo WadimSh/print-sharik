@@ -5,8 +5,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 0px var(--inner-small) var(--inner-margim) 0px rgba(51, 38, 174, 0.08);
+  border-bottom: 1px solid rgba(51, 38, 174, 0.08);
 }
 
 .wrapper {
