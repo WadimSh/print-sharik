@@ -4,6 +4,14 @@
   background: #fff;
   box-shadow: 0px var(--inner-small) var(--inner-margim) 0px rgba(51, 38, 174, 0.08);
   box-sizing: border-box;
+  padding: var(--inner-small);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 90%;
+  object-fit: cover;
+  object-position: top;
 }
