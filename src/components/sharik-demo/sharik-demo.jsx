@@ -1,8 +1,8 @@
-import { FC } from "react";
+import React from "react";
 
 import style from "./sharik-demo.module.css";
 
-const SharikDemo:FC = () => {
+const SharikDemo = () => {
 
   return (
     <section className={style.section}>

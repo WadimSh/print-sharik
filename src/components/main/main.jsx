@@ -1,8 +1,8 @@
-import { FC, PropsWithChildren } from "react";
+import React from "react";
 
 import style from "./main.module.css";
 
-const Main:FC<PropsWithChildren> = ({ children }) => {
+const Main = ({ children }) => {
 
   return(
     <main className={style.main}>

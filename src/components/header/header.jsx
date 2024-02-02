@@ -1,9 +1,9 @@
-import { FC } from "react";
+import React from "react";
 
 import style from "./header.module.css";
 import logo from "../../assets/images/tm04.png";
 
-const Header:FC = () => {
+const Header = () => {
 
   return(
     <header className={style.header}>

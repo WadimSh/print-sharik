@@ -1,9 +1,9 @@
-import { FC } from "react";
+import React from "react";
 
 import style from "./sharik-constructor.module.css";
 import sharik from "../../assets/images/1102-0022_m1_1200.jpg";
 
-const SharikConstructor:FC = () => {
+const SharikConstructor = () => {
   
   return (
     <section className={style.section}>
