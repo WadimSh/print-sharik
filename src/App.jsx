@@ -4,10 +4,12 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import MainPage from './pages/main-page';
 
+import './App.css';
+
 const App = () => {
   
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", width: "100%" }}>
+    <div className="page">
       <Header />
       <MainPage />
       <Footer />

@@ -8,8 +8,8 @@ const Header = () => {
   return(
     <header className={style.header}>
       <nav className={style.wrapper}>
-        <a href="https://new.sharik.ru/" target="_blank">
-          <img src={logo} className={style.logo} />
+        <a href="https://new.sharik.ru/" target="_blank" rel="noreferrer">
+          <img src={logo} alt="logo" className={style.logo} />
         </a>
       </nav>
     </header>
