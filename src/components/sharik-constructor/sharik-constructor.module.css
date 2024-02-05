@@ -1,10 +1,10 @@
 .section {
   width: 35%;
-  border-radius: var(--inner-margim);
+  border-radius: var(--border-radius-16);
   background: #fff;
-  box-shadow: 0px var(--inner-small) var(--inner-margim) 0px rgba(51, 38, 174, 0.08);
+  box-shadow: var(--border-shadow-second);
   box-sizing: border-box;
-  padding: var(--inner-small);
+  padding: var(--spacing-8);
   display: flex;
   justify-content: center;
   align-items: center;

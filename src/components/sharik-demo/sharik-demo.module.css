@@ -1,5 +1,5 @@
 .section {
   width: 65%;
   box-sizing: border-box;
-  padding: var(--inner-small);
+  padding: var(--spacing-8);
 }
