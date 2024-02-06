@@ -15,3 +15,35 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--size-normal-text);
+  line-height: var(--lineHeight-primary-text);
+  color: var(--color-border-line);
+  stroke: var(--color-border-line);
+  transition: .3s;
+}
+
+.menu:hover {
+  color: var(--color-support-text);
+  stroke: var(--color-support-text);
+  transition: .3s;
+}
+
+.point {
+  position: absolute;
+  top: -2px;
+  left: 17px;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--color-accent-warning);
+  border: 1px solid var(--color-bg-main);
+}
