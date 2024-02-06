@@ -1,25 +1,46 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import Button from '../../ui/button/button';
+import { Chevron } from '../../ui/icons/chevron';
+
+import style from './navigation-buttons.module.css';
 
 const NavigationButtons = ({ previousUrl, nextUrl }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handlePreviousClick = () => {
     if (previousUrl) {
-      history.push(previousUrl);
+      navigate(previousUrl, { replace: true });
     }
   };
   
   const handleNextClick = () => {
     if (nextUrl) {
-      history.push(nextUrl);
+      navigate(nextUrl, { replace: true });
     }
   };
 
   return (
-    <div>
-      <button onClick={handlePreviousClick}>Назад</button>
-      <button onClick={handleNextClick}>Далее</button>
+    <div className={!previousUrl ? style.wrapperRight : !nextUrl ? style.wrapperLeft : style.wrapper}>
+      {previousUrl && <Button
+                        iconBefore={<Chevron />}
+                        status="secondary"
+                        type="button"
+                        onClick={handlePreviousClick}
+                      >
+                        Назад
+                      </Button>
+      }
+      {nextUrl && <Button
+                    iconAfter={<Chevron />}
+                    status="primary"
+                    type="button"
+                    onClick={handleNextClick}
+                  >
+                    Далее
+                  </Button>
+      }
     </div>
   );
 };

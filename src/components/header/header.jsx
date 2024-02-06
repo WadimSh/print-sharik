@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 
 import Logo from "../../ui/logo/logo";
-import { Layout } from "../../assets/icons/layout";
+import { Layout } from "../../ui/icons/layout";
 
 import style from "./header.module.css";
 
 const Header = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
     
   return(
     <header className={style.wrapper}>

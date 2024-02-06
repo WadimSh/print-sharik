@@ -1,11 +1,13 @@
 import React from 'react';
 
+import './button.css';
+
 const Button = ({
-  extraClass,    
   iconBefore,    
   iconAfter,     
   onClick,       
-  type,          
+  type,
+  status,
   children,      
   ...rest        
 }) => {
@@ -14,7 +16,8 @@ const Button = ({
     onClick
   };
 
-  let buttonClasses = `button ${extraClass || ''}`.trim();
+  let buttonClasses = `button ${status === 'secondary' ? 'button-secondory'
+                      : status === 'primary' ? 'button-primary' : ''}`.trim();
 
   if (iconBefore) {
     buttonClasses += ' button-left';
@@ -27,13 +30,13 @@ const Button = ({
   return (
     <button
       className={buttonClasses}
-       type={type}
+      type={type}
       {...buttonEvents}
       {...rest}
     >
-      {iconBefore && <span className="before">{iconBefore}</span>}
+      {iconBefore && <span className="icon-before">{iconBefore}</span>}
       {children}
-      {iconAfter && <span className="after">{iconAfter}</span>}
+      {iconAfter && <span className="icon-after">{iconAfter}</span>}
     </button>
   );
 };

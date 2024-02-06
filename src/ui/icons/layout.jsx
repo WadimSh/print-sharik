@@ -7,4 +7,4 @@ export const Layout = () => {
       <path d="M7.28564 16.2856H16.7142" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )
-} 
+}; 

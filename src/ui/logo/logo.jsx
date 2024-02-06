@@ -1,13 +1,13 @@
 import React from "react";
 
 import logo from "../../assets/images/logo.png";
-import style from "./logo.module.css";
+import "./logo.css";
 
 const Logo = () => {
 
   return(
-    <a href="https://new.sharik.ru/" target="_blank" rel="noreferrer" className={style.link}>
-      <img src={logo} alt="logo" className={style.image} />
+    <a href="https://new.sharik.ru/" target="_blank" rel="noreferrer" className="logo">
+      <img src={logo} alt="logo" className="logo__img" />
     </a>
   )
 };

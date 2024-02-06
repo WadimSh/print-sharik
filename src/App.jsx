@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/header';
@@ -12,16 +12,21 @@ import Options from './pages/options';
 import './App.css';
 
 const App = () => {
-  
+  const [prevUrl, setPrevUrl] = useState('');
+  const updateUrl = (newUrl) => {
+    setPrevUrl(newUrl);
+  };
+  console.log(prevUrl)
+
   return (
     <div className="page">
       <Header />
       <Routes>
-        <Route path="/" element={<Prints />} />
-        <Route path="/balloons" element={<Balloons />} />
-        <Route path="/other" element={<Other />} />
-        <Route path="/order" element={<Order />} />
-        <Route path="/options" element={<Options />} />
+        <Route path="/" element={<Prints updateUrl={updateUrl} />} />
+        <Route path="/balloons" element={<Balloons updateUrl={updateUrl} />} />
+        <Route path="/other" element={<Other updateUrl={updateUrl} />} />
+        <Route path="/order" element={<Order updateUrl={updateUrl} />} />
+        <Route path="/options" element={<Options prevUrl={prevUrl} />} />
       </Routes>
       <Footer />
     </div>
