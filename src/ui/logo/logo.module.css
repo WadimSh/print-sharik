@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+}
+
+.image {
+  width: 96px;
+  height: 28px;
+  object-fit: contain;
+}

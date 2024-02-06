@@ -1,16 +1,19 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
+
+import Logo from "../../ui/logo/logo";
 
 import style from "./header.module.css";
-import logo from "../../assets/images/tm04.png";
 
 const Header = () => {
 
   return(
-    <header className={style.header}>
-      <nav className={style.wrapper}>
-        <a href="https://new.sharik.ru/" target="_blank" rel="noreferrer">
-          <img src={logo} alt="logo" className={style.logo} />
-        </a>
+    <header className={style.wrapper}>
+      <nav className={style.naviget}>
+        <Logo />
+        <NavLink>
+
+        </NavLink>
       </nav>
     </header>
   )

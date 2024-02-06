@@ -14,13 +14,13 @@
   --color-second-text: #555f7e;
   --color-support-text: #8e95a9;
   /* типографика */
-  --size-main-heading: 1,5rem;
-  --size-other-heading: 1,25rem;
-  --size-normal-text: 0.875rem;
-  --size-small-text: 0,75rem;
-  --lineHeight-large-text: 2,25rem;
-  --lineHeight-medium-text: 1,875rem;
-  --lineHeight-primary-text: 1,375rem;
+  --size-main-heading: 24px;
+  --size-other-heading: 20px;
+  --size-normal-text: 14px;
+  --size-small-text: 12px;
+  --lineHeight-large-text: 36px;
+  --lineHeight-medium-text: 30px;
+  --lineHeight-primary-text: 22px;
   /* отступы */
   --spacing-4: 4px;
   --spacing-8: 8px;

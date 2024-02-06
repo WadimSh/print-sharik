@@ -1,21 +1,17 @@
-.header {
+.wrapper {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: var(--spacing-12);
+  padding: var(--spacing-24) 0;
 }
 
-.wrapper {
-  width: 100%;
+.naviget {
+  width: clamp(19.375rem, 3.196rem + 80.893vw, 76rem);
   max-width: 1216px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  width: 96px;
 }

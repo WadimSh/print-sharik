@@ -5,9 +5,9 @@ import style from "./footer.module.css";
 const Footer = () => {
 
   return(
-    <footer className={style.footer}>
-      <span className={style.copi}>
-        &copy;&nbsp;2024&nbsp;г. АО&nbsp;&laquo;Европа&nbsp;уно&nbsp;трейд&raquo;
+    <footer className={style.wrapper}>
+      <span className={style.copyright}>
+        &copy;&nbsp;{new Date().getFullYear()}г.&nbsp;&nbsp;АО&nbsp;&laquo;Европа&nbsp;уно&nbsp;трейд&raquo;
       </span>
     </footer>
   )

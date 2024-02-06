@@ -2,13 +2,13 @@ import React from 'react';
 
 import Main from '../components/main/main';
 
-const MainPage = () => {
+const Other = () => {
   
   return (
     <Main>
-      
+      Other
     </Main>
   );
 }
 
-export default MainPage;
+export default Other;
