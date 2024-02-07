@@ -27,8 +27,11 @@
 }
 
 .button-primary:disabled {
+  stroke: var(--color-support-text);
+  color: var(--color-support-text);
   border: 2px solid var(--color-border-line);
   background-color: var(--color-border-line);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -42,12 +45,16 @@
 
 .button-secondory:hover, .button-secondory:focus {
   border: 2px solid var(--color-accent-hover);
+  background-color: var(--color-bg-second);
   box-shadow: var(--border-shadow-second);
   transition: all .3s;
 }
 
 .button-secondory:disabled {
+  stroke: var(--color-support-text);
+  color: var(--color-support-text);
   border: 2px solid var(--color-border-line);
+  box-shadow: none;
   cursor: not-allowed;
 }
 

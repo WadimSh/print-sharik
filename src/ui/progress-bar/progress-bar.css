@@ -1,0 +1,44 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 100px;
+  height: 8px;
+  background-color: var(--color-progressbar-primary);
+}
+
+.line-start {
+  width: 80px;
+  border-radius: 8px 0 0 8px;
+}
+
+.line-finely {
+  width: 80px;
+  border-radius: 0 8px 8px 0;
+}
+
+.active.line {
+  background-color: var(--color-accent-success);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background-color: var(--color-progressbar-primary);
+  font-weight: 600;
+  font-size: var(--size-normal-text);
+  line-height: var(--lineHeight-primary-text);
+  color: var(--color-second-text);
+}
+
+.active.circle {
+  color: var(--color-bg-main);
+  background-color: var(--color-accent-success);
+}
