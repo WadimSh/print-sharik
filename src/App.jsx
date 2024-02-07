@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/header';
@@ -13,11 +13,11 @@ import './App.css';
 
 const App = () => {
   const [prevUrl, setPrevUrl] = useState('');
+  
   const updateUrl = (newUrl) => {
     setPrevUrl(newUrl);
   };
-  console.log(prevUrl)
-
+  
   return (
     <div className="page">
       <Header />
