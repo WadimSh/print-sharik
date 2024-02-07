@@ -2,7 +2,7 @@
   font-weight: 600;
   font-size: var(--size-normal-text);
   line-height: var(--lineHeight-primary-text);
-  padding: var(--spacing-12) var(--spacing-36);
+  padding: var(--spacing-8) var(--spacing-36);
   cursor: pointer;
   display: flex;
   align-items: center;

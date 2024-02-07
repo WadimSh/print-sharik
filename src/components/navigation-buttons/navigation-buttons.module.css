@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--spacing-24);
+  padding-top: var(--spacing-12);
   border-top: var(--border-line-primary);
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: var(--spacing-24);
+  padding-top: var(--spacing-12);
   border-top: var(--border-line-primary);
 }
 
@@ -21,6 +21,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-top: var(--spacing-24);
+  padding-top: var(--spacing-12);
   border-top: var(--border-line-primary);
 }
