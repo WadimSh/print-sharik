@@ -16,6 +16,7 @@ const Prints = ({ updateUrl }) => {
       Prints
       <NavigationButtons
         nextUrl="/balloons"
+        isDisabled={false}
       />
     </Main>
   );

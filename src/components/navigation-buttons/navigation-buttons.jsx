@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Button from '../../ui/button/button';
@@ -6,8 +6,9 @@ import { Chevron } from '../../ui/icons/chevron';
 
 import style from './navigation-buttons.module.css';
 
-const NavigationButtons = ({ previousUrl, nextUrl }) => {
+const NavigationButtons = ({ previousUrl, nextUrl, isDisabled }) => {
   const navigate = useNavigate();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const handlePreviousClick = () => {
     if (previousUrl) {
@@ -21,8 +22,12 @@ const NavigationButtons = ({ previousUrl, nextUrl }) => {
     }
   };
 
+  useEffect(() => {
+    setIsButtonDisabled(isDisabled)
+  }, [isDisabled]);
+
   return (
-    <div className={!previousUrl ? style.wrapperRight : !nextUrl ? style.wrapperLeft : style.wrapper}>
+    <section className={!previousUrl ? style.wrapperRight : !nextUrl ? style.wrapperLeft : style.wrapper}>
       {previousUrl && <Button
                         iconBefore={<Chevron />}
                         status="secondary"
@@ -37,11 +42,12 @@ const NavigationButtons = ({ previousUrl, nextUrl }) => {
                     status="primary"
                     type="button"
                     onClick={handleNextClick}
+                    disabled={isButtonDisabled}
                   >
                     Далее
                   </Button>
       }
-    </div>
+    </section>
   );
 };
 
