@@ -7,7 +7,7 @@ import { Layout } from "../../ui/icons/layout";
 import style from "./header.module.css";
 
 const Header = () => {
-  const [isActive] = useState(false);
+  const [isActive] = useState(true);
     
   return(
     <header className={style.wrapper}>
