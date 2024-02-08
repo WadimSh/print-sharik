@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import Main from '../components/main/main';
 import ProgressBox from '../components/progress-box/progress-box';
+import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 
 const Balloons = ({ updateUrl }) => {
@@ -17,7 +18,9 @@ const Balloons = ({ updateUrl }) => {
       <ProgressBox
         progress={2}
       />
-      Balloons
+      <ConstructorBlock>
+        Balloons
+      </ConstructorBlock>
       <NavigationButtons
         previousUrl="/"
         nextUrl="/other"

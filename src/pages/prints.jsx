@@ -21,7 +21,9 @@ const Prints = ({ updateUrl }) => {
       <ProgressBox
         progress={config.ru.step1}
       />
-      <ConstructorBlock />
+      <ConstructorBlock>
+        Print
+      </ConstructorBlock>
       <NavigationButtons
         nextUrl="/balloons"
         isDisabled={false}

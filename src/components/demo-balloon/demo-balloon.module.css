@@ -1,0 +1,31 @@
+.block {
+  margin-left: auto;
+  background-color: var(--color-bg-second);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34%;
+  min-height: 100%;
+  max-height: 534px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: var(--border-radius-8);
+  box-shadow: var(--border-shadow-second);
+  padding: var(--spacing-16) var(--spacing-8);
+  position: relative;
+}
+
+.balloon {
+  width: 100%;
+  object-fit: cover;
+}
+
+.print {
+  position: absolute;
+  margin-inline: auto;
+  inset-inline: 0;
+  inset-block-start: 50%;
+  transform: translateY(-60%);
+  width: 48%;
+  object-fit: contain;
+}
