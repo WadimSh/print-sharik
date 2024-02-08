@@ -1,23 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Main from '../components/main/main';
 import ProgressBox from '../components/progress-box/progress-box';
+import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
+
+import { ConfigContext } from '../utils/contexts';
 
 const Prints = ({ updateUrl }) => {
   const location = useLocation();
+  const config = useContext(ConfigContext);
 
   useEffect(() => {
-    updateUrl(location.pathname)
+    updateUrl(location.pathname);
   }, [location, updateUrl]);
   
   return (
     <Main>
       <ProgressBox
-        progress={0}
+        progress={config.ru.step1}
       />
-      Prints
+      <ConstructorBlock />
       <NavigationButtons
         nextUrl="/balloons"
         isDisabled={false}

@@ -9,6 +9,7 @@ import Other from './pages/other';
 import Order from './pages/order';
 import Options from './pages/options';
 
+import { config, ConfigContext } from './utils/contexts';
 import './App.css';
 
 const App = () => {
@@ -17,18 +18,20 @@ const App = () => {
   const updateUrl = (newUrl) => {
     setPrevUrl(newUrl);
   };
-  
+
   return (
     <div className="page">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Prints updateUrl={updateUrl} />} />
-        <Route path="/balloons" element={<Balloons updateUrl={updateUrl} />} />
-        <Route path="/other" element={<Other updateUrl={updateUrl} />} />
-        <Route path="/order" element={<Order updateUrl={updateUrl} />} />
-        <Route path="/options" element={<Options prevUrl={prevUrl} />} />
-      </Routes>
-      <Footer />
+      <ConfigContext.Provider value={config}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Prints updateUrl={updateUrl} />} />
+          <Route path="/balloons" element={<Balloons updateUrl={updateUrl} />} />
+          <Route path="/other" element={<Other updateUrl={updateUrl} />} />
+          <Route path="/order" element={<Order updateUrl={updateUrl} />} />
+          <Route path="/options" element={<Options prevUrl={prevUrl} />} />
+        </Routes>
+        <Footer />
+      </ConfigContext.Provider>
     </div>
   );
 }
