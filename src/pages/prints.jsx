@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Main from '../components/main/main';
@@ -8,25 +8,33 @@ import NavigationButtons from '../components/navigation-buttons/navigation-butto
 
 import { ConfigContext } from '../utils/contexts';
 
-const Prints = ({ updateUrl }) => {
+const Prints = ({ updateUrl, handelStep }) => {
   const location = useLocation();
   const config = useContext(ConfigContext);
+  const [dis, setDis] = useState(config.step1.print === 'print' ? false : true);
 
   useEffect(() => {
     updateUrl(location.pathname);
   }, [location, updateUrl]);
+
+  const handleCheckboxChange = () => {
+    const value1 = dis ? 'print' : '';
+    const value2 = dis && '';
+    handelStep(value1, value2)
+    setDis(!dis)
+  };
   
   return (
     <Main>
       <ProgressBox
-        progress={config.ru.step1}
+        progress={config.step1.print === 'print' ? 1 : 0}
       />
       <ConstructorBlock>
-        Print
+        <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />
       </ConstructorBlock>
       <NavigationButtons
         nextUrl="/balloons"
-        isDisabled={false}
+        isDisabled={dis}
       />
     </Main>
   );

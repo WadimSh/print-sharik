@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Main from '../components/main/main';
@@ -6,25 +6,35 @@ import ProgressBox from '../components/progress-box/progress-box';
 import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 
-const Balloons = ({ updateUrl }) => {
+import { ConfigContext } from '../utils/contexts';
+
+const Balloons = ({ updateUrl, handelStep }) => {
   const location = useLocation();
+  const config = useContext(ConfigContext);
+  const [dis, setDis] = useState(config.step2.balloon === 'bable' ? false : true);
 
   useEffect(() => {
     updateUrl(location.pathname)
   }, [location, updateUrl]);
 
+  const handleCheckboxChange = () => {
+    const value = dis ? 'bable' : '';
+    handelStep(value)
+    setDis(!dis)
+  };
+
   return (
     <Main>
       <ProgressBox
-        progress={2}
+        progress={config.step2.balloon === 'bable' ? 3 : 2}
       />
       <ConstructorBlock>
-        Balloons
+        <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />
       </ConstructorBlock>
       <NavigationButtons
         previousUrl="/"
         nextUrl="/other"
-        isDisabled={false}
+        isDisabled={dis}
       />
     </Main>
   );

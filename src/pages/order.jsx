@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Main from '../components/main/main';
@@ -6,20 +6,30 @@ import ProgressBox from '../components/progress-box/progress-box';
 import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 
-const Order = ({ updateUrl }) => {
+import { ConfigContext } from '../utils/contexts';
+
+const Order = ({ updateUrl, handelStep }) => {
   const location = useLocation();
+  const config = useContext(ConfigContext);
+  const [dis, setDis] = useState(config.step4.status === 'order' ? false : true);
 
   useEffect(() => {
     updateUrl(location.pathname)
   }, [location, updateUrl]);
 
+  const handleCheckboxChange = () => {
+    const value = dis ? 'order' : '';
+    handelStep(value)
+    setDis(!dis)
+  };
+
   return (
     <Main>
       <ProgressBox
-        progress={6}
+        progress={config.step4.status === 'order' ? 7 : 6}
       />
       <ConstructorBlock>
-        Order
+        <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />
       </ConstructorBlock>
       <NavigationButtons
         previousUrl="/other"
