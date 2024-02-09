@@ -23,10 +23,14 @@ const Balloons = ({ updateUrl, handelStep }) => {
     setDis(!dis);
   };
 
+  const progressExpression = config.step2.balloon === 'bable' ? 3 
+  : config.step1.print === 'print' ? 2 
+  : 0;
+
   return (
     <Main>
       <ProgressBox
-        progress={config.step2.balloon === 'bable' ? 3 : 2}
+        progress={progressExpression}
       />
       <ConstructorBlock>
         <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />

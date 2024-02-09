@@ -23,11 +23,14 @@ const Other = ({ updateUrl, handelStep }) => {
     setDis(!dis)
   };
 
+  const progressExpression = config.step3.color === 'color' ? 5 
+  : config.step1.print === 'print' && config.step2.balloon === 'bable'? 4
+  : 0;
 
   return (
     <Main>
       <ProgressBox
-        progress={config.step3.color === 'color' ? 5 : 4}
+        progress={progressExpression}
       />
       <ConstructorBlock>
         <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />

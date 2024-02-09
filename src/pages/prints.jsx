@@ -23,11 +23,13 @@ const Prints = ({ updateUrl, handelStep }) => {
     handelStep('step3', 'color', '');
     setDis(!dis);
   };
+
+  const progressExpression = config.step1.print === 'print' ? 1 : 0;
   
   return (
     <Main>
       <ProgressBox
-        progress={config.step1.print === 'print' ? 1 : 0}
+        progress={progressExpression}
       />
       <ConstructorBlock>
         <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />
