@@ -18,7 +18,7 @@ const App = () => {
     step1: { print: '' },
     step2: { balloon: '' },
     step3: { color: '' },
-    step4: { status: '', step: '' },
+    step4: { status: '' },
   });
 
   const updateUrl = (newUrl) => {
