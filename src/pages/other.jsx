@@ -19,7 +19,7 @@ const Other = ({ updateUrl, handelStep }) => {
 
   const handleCheckboxChange = () => {
     const value = dis ? 'color' : '';
-    handelStep(value)
+    handelStep('step3', value)
     setDis(!dis)
   };
 

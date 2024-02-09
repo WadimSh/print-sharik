@@ -19,7 +19,7 @@ const Order = ({ updateUrl, handelStep }) => {
 
   const handleCheckboxChange = () => {
     const value = dis ? 'order' : '';
-    handelStep(value)
+    handelStep('step4', value)
     setDis(!dis)
   };
 

@@ -19,7 +19,7 @@ const Balloons = ({ updateUrl, handelStep }) => {
 
   const handleCheckboxChange = () => {
     const value = dis ? 'bable' : '';
-    handelStep(value)
+    handelStep('step2', value)
     setDis(!dis)
   };
 
