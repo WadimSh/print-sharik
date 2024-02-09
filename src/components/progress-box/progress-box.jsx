@@ -19,7 +19,7 @@ const ProgressBox = ({ progress }) => {
   return (
     <section className={style.wrapper}>
       <h1 className={style.title}>Коммерческая печать на воздушных шарах</h1>
-      <ProgressBar />
+      <ProgressBar progress={progress} />
       <p className={style.subtitle}>{sutitleText[progress]}</p>
     </section>
   );

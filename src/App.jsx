@@ -18,21 +18,18 @@ const App = () => {
     step1: { print: '' },
     step2: { balloon: '' },
     step3: { color: '' },
-    step4: { status: '' },
+    step4: { status: '', step: '' },
   });
 
   const updateUrl = (newUrl) => {
     setPrevUrl(newUrl);
   };
 
-  const handleStepChange = (input, value) => {
+  const handleStepChange = (input, name, value) => {
     setState((prevState) => ({
       ...prevState,
       [input]: {
-      ...(input === "step1" && { print: value }),
-      ...(input === "step2" && { balloon: value }),
-      ...(input === "step3" && { color: value }),
-      ...(input === "step4" && { status: value })
+        ...prevState[input], [name]: value 
       }
     }));
   };

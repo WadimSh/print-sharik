@@ -19,9 +19,8 @@ const Prints = ({ updateUrl, handelStep }) => {
 
   const handleCheckboxChange = () => {
     const value1 = dis ? 'print' : '';
-    const value2 = dis && '';
-    handelStep('step1', value1);
-    handelStep('step3', value2);
+    handelStep('step1', 'print', value1);
+    handelStep('step3', 'color', '');
     setDis(!dis);
   };
   
