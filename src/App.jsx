@@ -10,6 +10,7 @@ import Order from './pages/order';
 import Options from './pages/options';
 
 import { ConfigContext } from './utils/contexts';
+import { prints } from './utils/data';
 import './App.css';
 
 const App = () => {
