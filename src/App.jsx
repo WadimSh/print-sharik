@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
@@ -8,6 +8,7 @@ import Balloons from './pages/balloons';
 import Other from './pages/other';
 import Order from './pages/order';
 import Options from './pages/options';
+//import ProtectedRoute from './components/protected-route/protected-route';
 
 import { ConfigContext } from './utils/contexts';
 import { prints } from './utils/data';
@@ -15,6 +16,7 @@ import './App.css';
 
 const App = () => {
   const [prevUrl, setPrevUrl] = useState('');
+  const [isLoggedIn, setLoggedIn] = useState(false);
   const [state, setState] = useState({
     step1: { print: '' },
     step2: { balloon: '' },
@@ -33,6 +35,7 @@ const App = () => {
         ...prevState[input], [name]: value 
       }
     }));
+    setLoggedIn(true);
   };
 
   return (
@@ -41,9 +44,9 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Prints updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/balloons" element={<Balloons updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/other" element={<Other updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/order" element={<Order updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/balloons" element={!isLoggedIn ? <Navigate to="/" /> : <Balloons updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/other" element={!isLoggedIn ? <Navigate to="/" /> : <Other updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/order" element={!isLoggedIn ? <Navigate to="/" /> : <Order updateUrl={updateUrl} handelStep={handleStepChange} />} />
           <Route path="/options" element={<Options prevUrl={prevUrl} />} />
         </Routes>
         <Footer />
