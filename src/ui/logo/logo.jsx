@@ -6,7 +6,7 @@ import "./logo.css";
 const Logo = () => {
 
   return(
-    <a href="https://new.sharik.ru/" target="_blank" rel="noreferrer" className="logo">
+    <a href="https://new.sharik.ru/" target="_blank" rel="noopener noreferrer" className="logo">
       <img src={logo} alt="logo" className="logo__img" />
     </a>
   )

@@ -8,14 +8,14 @@ export const prints = [
     'price': '',
     'properties': [
       {
-        'id': '',
         'name': '',
-        'value': ''
+        'value': '',
+        'type': ''
       },
       {
-        'id': '',
         'name': '',
-        'value': ''
+        'value': '',
+        'type': ''
       },
     ]
   },
@@ -28,14 +28,14 @@ export const prints = [
     'price': '',
     'properties': [
       {
-        'id': '',
         'name': '',
-        'value': ''
+        'value': '',
+        'type': ''
       },
       {
-        'id': '',
         'name': '',
-        'value': ''
+        'value': '',
+        'type': ''
       },
     ]
   },
