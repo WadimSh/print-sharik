@@ -6,6 +6,8 @@ import ProgressBox from '../components/progress-box/progress-box';
 import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 
+import TextInput from '../ui/input/input';
+
 import { ConfigContext } from '../utils/contexts';
 
 const Prints = ({ updateUrl, handelStep }) => {

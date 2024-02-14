@@ -8,20 +8,17 @@ import Balloons from './pages/balloons';
 import Other from './pages/other';
 import Order from './pages/order';
 import Options from './pages/options';
-//import ProtectedRoute from './components/protected-route/protected-route';
 
 import { ConfigContext } from './utils/contexts';
-import { prints } from './utils/data';
 import './App.css';
 
 const App = () => {
   const [prevUrl, setPrevUrl] = useState('');
-  const [isLoggedIn, setLoggedIn] = useState(false);
   const [state, setState] = useState({
-    step1: { print: '' },
-    step2: { balloon: '' },
-    step3: { color: '' },
-    step4: { status: '' },
+    step1: { print: '', pach: false },
+    step2: { balloon: '', pach: false },
+    step3: { color: '',  pach: false},
+    step4: { status: '', pach: false },
   });
 
   const updateUrl = (newUrl) => {
@@ -32,21 +29,23 @@ const App = () => {
     setState((prevState) => ({
       ...prevState,
       [input]: {
-        ...prevState[input], [name]: value 
+        ...prevState[input], 
+        [name]: value,
+        pach: true
       }
     }));
-    setLoggedIn(true);
   };
-
+  console.log(state)
+  
   return (
     <div className="page">
       <ConfigContext.Provider value={state}>
         <Header />
         <Routes>
           <Route path="/" element={<Prints updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/balloons" element={!isLoggedIn ? <Navigate to="/" /> : <Balloons updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/other" element={!isLoggedIn ? <Navigate to="/" /> : <Other updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/order" element={!isLoggedIn ? <Navigate to="/" /> : <Order updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/balloons" element={state.step1.pach === false ? <Navigate to="/" replace /> : <Balloons updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/other" element={state.step2.pach === false ? <Navigate to="/" replace /> : <Other updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/order" element={state.step3.pach === false ? <Navigate to="/" replace /> : <Order updateUrl={updateUrl} handelStep={handleStepChange} />} />
           <Route path="/options" element={<Options prevUrl={prevUrl} />} />
         </Routes>
         <Footer />
