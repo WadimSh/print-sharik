@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/header/header';
@@ -14,12 +14,22 @@ import './App.css';
 
 const App = () => {
   const [prevUrl, setPrevUrl] = useState('');
+  const [logic, setLogic] = useState(false);
   const [state, setState] = useState({
-    step1: { print: '', pach: false },
-    step2: { balloon: '', pach: false },
-    step3: { color: '',  pach: false},
-    step4: { status: '', pach: false },
+    step1: { print: '' },
+    step2: { balloon: '' },
+    step3: { color: '' },
+    step4: { status: '' },
   });
+
+  //localStorage.setItem('initial', JSON.stringify(state));
+
+  useEffect(() => {
+    if (localStorage.getItem('initial')) {
+      setState(JSON.parse(localStorage.getItem('initial')));
+      setLogic(true);
+    }
+  }, []);
 
   const updateUrl = (newUrl) => {
     setPrevUrl(newUrl);
@@ -30,12 +40,13 @@ const App = () => {
       ...prevState,
       [input]: {
         ...prevState[input], 
-        [name]: value,
-        pach: true
+        [name]: value
       }
     }));
+    localStorage.setItem('initial', JSON.stringify(state));
   };
-  console.log(state)
+
+  //console.log(state)
   
   return (
     <div className="page">
@@ -43,9 +54,9 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Prints updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/balloons" element={state.step1.pach === false ? <Navigate to="/" replace /> : <Balloons updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/other" element={state.step2.pach === false ? <Navigate to="/" replace /> : <Other updateUrl={updateUrl} handelStep={handleStepChange} />} />
-          <Route path="/order" element={state.step3.pach === false ? <Navigate to="/" replace /> : <Order updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/balloons" element={!logic ? <Navigate to="/" replace /> : <Balloons updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/other" element={!logic ? <Navigate to="/" replace /> : <Other updateUrl={updateUrl} handelStep={handleStepChange} />} />
+          <Route path="/order" element={!logic ? <Navigate to="/" replace /> : <Order updateUrl={updateUrl} handelStep={handleStepChange} />} />
           <Route path="/options" element={<Options prevUrl={prevUrl} />} />
         </Routes>
         <Footer />

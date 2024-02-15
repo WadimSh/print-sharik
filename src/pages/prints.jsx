@@ -5,8 +5,7 @@ import Main from '../components/main/main';
 import ProgressBox from '../components/progress-box/progress-box';
 import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
-
-import TextInput from '../ui/input/input';
+import PrintSelector from '../components/print-selector/print-selector';
 
 import { ConfigContext } from '../utils/contexts';
 
@@ -35,6 +34,8 @@ const Prints = ({ updateUrl, handelStep }) => {
       />
       <ConstructorBlock>
         <input type='checkbox' checked={!dis} onChange={handleCheckboxChange} />
+        
+        <PrintSelector />
       </ConstructorBlock>
       <NavigationButtons
         nextUrl="/balloons"
