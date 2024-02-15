@@ -23,6 +23,7 @@ const App = () => {
   });
 
   //localStorage.setItem('initial', JSON.stringify(state));
+  //localStorage.removeItem('initial');
 
   useEffect(() => {
     if (localStorage.getItem('initial')) {
