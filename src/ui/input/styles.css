@@ -1,0 +1,38 @@
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.selected-value {
+  margin-right: 10px;
+}
+
+.remove-option {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+button:hover {
+  background: lightgray;
+}
+
+
