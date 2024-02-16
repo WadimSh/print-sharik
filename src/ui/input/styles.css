@@ -1,12 +1,15 @@
 .dropdown-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .selected-option {
   display: flex;
-  align-items: center;
-  padding: 10px;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid #c1c1c1;
+  border-radius: 50px;
 }
 
 .selected-value {
@@ -14,24 +17,37 @@
 }
 
 .remove-option {
+  transform: rotate(45deg);
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 .options {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
+  border: 1px solid #c1c1c1;
+  background-color: #f8f8f8;
+  
 }
 
-button {
+.button {
   background: none;
   border: none;
   cursor: pointer;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
 }
 
-button:hover {
+.button:hover {
   background: lightgray;
 }
 

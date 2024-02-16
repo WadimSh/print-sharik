@@ -18,6 +18,9 @@ const PrintSelector = () => {
 
   return (
     <div>
+      <div>
+        <CardsBlock />
+        </div>
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="material-icons">search</div>
         <input
@@ -33,9 +36,7 @@ const PrintSelector = () => {
         />
         <button className="btn-small" type="submit">Найти</button>
       </form>
-      <div>
-        <CardsBlock />
-      </div>
+      
     </div>
   );
 };

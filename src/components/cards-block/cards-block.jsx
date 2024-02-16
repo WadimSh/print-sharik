@@ -8,9 +8,9 @@ const CardsBlock = () => {
   console.log(sortPrintsByCategory(data.prints, 'category', 'code'))
 
   return (
-    <>
+    <div style={{ display: "inline-block" }}>
      <Dropdown />
-    </>
+    </div>
   );
 };
 

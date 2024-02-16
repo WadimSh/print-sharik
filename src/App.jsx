@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useId } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Header from './components/header/header';
@@ -13,9 +13,11 @@ import { ConfigContext } from './utils/contexts';
 import './App.css';
 
 const App = () => {
+  const orderId = useId();
   const [prevUrl, setPrevUrl] = useState('');
-  const [logic, setLogic] = useState(false);
+  const [logic, setLogic] = useState(true);
   const [state, setState] = useState({
+    id: orderId,
     step1: { print: '' },
     step2: { balloon: '' },
     step3: { color: '' },
@@ -25,18 +27,19 @@ const App = () => {
   //localStorage.setItem('initial', JSON.stringify(state));
   //localStorage.removeItem('initial');
 
-  useEffect(() => {
-    if (localStorage.getItem('initial')) {
-      setState(JSON.parse(localStorage.getItem('initial')));
-      setLogic(true);
-    }
-  }, []);
+ // useEffect(() => {
+ //   if (localStorage.getItem('initial')) {
+ //     setState(JSON.parse(localStorage.getItem('initial')));
+ //     setLogic(true);
+ //   }
+ // }, []);
 
   const updateUrl = (newUrl) => {
     setPrevUrl(newUrl);
   };
 
   const handleStepChange = (input, name, value) => {
+    console.log(state)
     setState((prevState) => ({
       ...prevState,
       [input]: {
@@ -47,7 +50,7 @@ const App = () => {
     localStorage.setItem('initial', JSON.stringify(state));
   };
 
-  //console.log(state)
+  
   
   return (
     <div className="page">
