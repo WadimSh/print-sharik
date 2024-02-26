@@ -1,0 +1,62 @@
+.text {
+	margin: 0;
+	padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+.text_type_main-default {
+	font-family: "Inter", sans-serif;
+  font-weight: 400;
+	font-size: var(--text-s);
+}
+
+.text_type_main-large {
+	font-family: "Inter", sans-serif;
+  font-weight: 600;
+	font-size: var(--text-l);
+}
+
+.text_type_main-medium {
+	font-family: "Inter", sans-serif;
+	font-weight: 500;
+	font-size: var(--text-m);
+}
+
+.text_type_main-small {
+	font-family: "Inter", sans-serif;
+  font-weight: 400;
+	font-size: var(--text-xs);
+}
+
+.text_color_primary {
+	color: var(--color-text-second)
+}
+
+.text_color_inactive {
+	color: var(--color-text-support)
+}
+
+.text_color_accent {
+	color: var(--color-accent-main)
+}
+
+.text_color_error {
+	color: var(--color-error)
+}
+
+.text_color_success {
+	color: var(--color-success)
+}
+
+.noselect {
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
+}

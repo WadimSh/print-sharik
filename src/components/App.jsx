@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useId } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import Prints from './pages/prints';
-import Balloons from './pages/balloons';
-import Other from './pages/other';
-import Order from './pages/order';
-import Options from './pages/options';
+import Header from './header/header';
+import Footer from './footer/footer';
+import Prints from '../pages/prints';
+import Balloons from '../pages/balloons';
+import Other from '../pages/other';
+import Order from '../pages/order';
+import Options from '../pages/options';
 
-import { ConfigContext } from './utils/contexts';
+import { ConfigContext } from '../utils/contexts';
 import './App.css';
-import Main from './components/main/main';
+import Main from './main/main';
 
 const App = () => {
   //const orderId = useId();
