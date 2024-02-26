@@ -6,7 +6,7 @@ import ProgressBox from '../components/progress-box/progress-box';
 import ConstructorBlock from '../components/constructor-block/constructor-block';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 
-import { ConfigContext } from '../utils/contexts';
+import { ConfigContext } from '../context/context';
 
 const Balloons = ({ updateUrl, handelStep }) => {
   const location = useLocation();

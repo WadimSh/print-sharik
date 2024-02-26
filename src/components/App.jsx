@@ -9,7 +9,7 @@ import Other from '../pages/other';
 import Order from '../pages/order';
 import Options from '../pages/options';
 
-import { ConfigContext } from '../utils/contexts';
+import { ConfigContext } from '../context/context';
 import './App.css';
 import Main from './main/main';
 

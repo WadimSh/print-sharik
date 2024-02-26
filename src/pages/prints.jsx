@@ -7,7 +7,7 @@ import ConstructorBlock from '../components/constructor-block/constructor-block'
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 import PrintSelector from '../components/print-selector/print-selector';
 
-import { ConfigContext } from '../utils/contexts';
+import { ConfigContext } from '../context/context';
 
 const Prints = ({ updateUrl, handelStep }) => {
   const location = useLocation();

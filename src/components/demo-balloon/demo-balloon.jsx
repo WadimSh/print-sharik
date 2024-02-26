@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { ConfigContext } from '../../utils/contexts';
+import { ConfigContext } from '../../context/context';
 
 import style from "./demo-balloon.module.css";
 

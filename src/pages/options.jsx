@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import Main from '../components/main/main';
 import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
 
-import { ConfigContext } from '../utils/contexts';
+import { ConfigContext } from '../context/context';
 
 const Options = ({ prevUrl }) => {
   const config = useContext(ConfigContext);
