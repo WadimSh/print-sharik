@@ -1,44 +1,5 @@
 @import url(./assets/fonts/fonts.css);
+@import url(./assets/styles/common.css);
+@import url(./assets/styles/typography.css);
+@import url(./assets/styles/box.css);
 
-:root {
-  /* палитра цветов */
-  --color-bg-main: #f8f8f8;
-  --color-bg-second: #fff;
-  --color-accent-main: #396ec4;
-  --color-accent-success: #279f51;
-  --color-accent-warning: #ffa000;
-  --color-accent-error: #ff392b;
-  --color-accent-hover: #2f80ed;
-  --color-border-line: #cdd1de;
-  --color-progressbar-primary: #e9eaf3;
-  --color-main-text: #1c2a53;
-  --color-second-text: #555f7e;
-  --color-support-text: #8e95a9;
-  /* типографика */
-  --size-main-heading: 24px;
-  --size-other-heading: 20px;
-  --size-normal-text: 14px;
-  --size-small-text: 12px;
-  --lineHeight-large-text: 36px;
-  --lineHeight-medium-text: 30px;
-  --lineHeight-primary-text: 22px;
-  /* отступы */
-  --spacing-4: 4px;
-  --spacing-8: 8px;
-  --spacing-12: 12px;
-  --spacing-16: 16px;
-  --spacing-24: 24px;
-  --spacing-36: 36px;
-  /* бордеры */
-  --border-line-primary: 1px solid var(--color-border-line);
-  --border-shadow-second: 0px 8px 16px 0px rgba(51, 38, 174, 0.08);
-  /* радиусы */
-  --border-radius-2: 2px;
-  --border-radius-4: 4px;
-  --border-radius-8: 8px;
-  --border-radius-16: 16px;
-}
-
-body {
-  margin: 0;
-}

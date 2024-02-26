@@ -1,14 +1,13 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 
 import Logo from "../../ui/logo/logo";
 import { Layout } from "../../ui/icons/layout";
-import { ConfigContext } from '../../utils/contexts';
 import style from "./header.module.css";
 
 const Header = () => {
-  const config = useContext(ConfigContext);
-      
+  const [logic, setLogic] = useState(false);
+  
   return(
     <header className={style.wrapper}>
       <nav className={style.naviget}>
@@ -16,7 +15,7 @@ const Header = () => {
         <NavLink to="/options" className={style.menu}>
           <Layout />
           <span>Мои варианты</span>
-          {config.step4.status === 'order' && <span className={style.point}></span>}
+          {logic && <span className={style.point}></span>}
         </NavLink>
       </nav>
     </header>
