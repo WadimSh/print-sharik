@@ -1,15 +1,27 @@
 import React from "react";
 
 import logo from "../../assets/images/logo.png";
-import "./logo.css";
 
 const Logo = () => {
+  const logoStyle = {
+    width: '96px',
+    height: 'auto',
+    cursor: 'pointer',
+    margin: '10px'
+  };
 
-  return(
-    <a href="https://new.sharik.ru/" target="_blank" rel="noopener noreferrer" className="logo">
-      <img src={logo} alt="logo" className="logo__img" />
-    </a>
-  )
+  const handleLogoClick = () => {
+    window.open('https://new.sharik.ru/', '_blank');
+  };
+
+  return (
+    <img 
+      src={logo} 
+      alt="Company logo" 
+      style={logoStyle} 
+      onClick={handleLogoClick} 
+    />
+  );
 };
 
 export default Logo;

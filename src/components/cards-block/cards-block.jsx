@@ -1,7 +1,7 @@
 import React from "react";
 //import data from "../../utils/data.json";
 import sortPrintsByCategory from "../../utils/sort-prints";
-import Dropdown from "../../ui/input/drop";
+import Dropdown from "../../ui/dropdown/dropdown";
 
 const CardsBlock = () => {
 

@@ -1,17 +1,8 @@
-import React, { useState, useEffect, useId } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
 
-import Header from './header/header';
-import Footer from './footer/footer';
-import Prints from '../pages/prints';
-import Balloons from '../pages/balloons';
-import Other from '../pages/other';
-import Order from '../pages/order';
-import Options from '../pages/options';
-
-import { ConfigContext } from '../context/context';
-import './App.css';
-import Main from './main/main';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
+import Main from './components/main/main';
 
 const App = () => {
   //const orderId = useId();
@@ -47,16 +38,14 @@ const App = () => {
   //  localStorage.setItem('initial', JSON.stringify(state));
   //};
 
-  
-  
   return (
-    <div className="page">
+    <>
       <Header />
       <Main>
         
       </Main>
       <Footer />
-    </div>
+    </>
   );
 }
 

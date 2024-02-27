@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Main from '../components/main/main';
-import ProgressBox from '../components/progress-box/progress-box';
-import ConstructorBlock from '../components/constructor-block/constructor-block';
-import NavigationButtons from '../components/navigation-buttons/navigation-buttons';
-import PrintSelector from '../components/print-selector/print-selector';
+import Main from '../../components/main/main';
+import ProgressBox from '../../components/progress-box/progress-box';
+import ConstructorBlock from '../../components/constructor-block/constructor-block';
+import NavigationButtons from '../../components/navigation-buttons/navigation-buttons';
+import PrintSelector from '../../components/print-selector/print-selector';
 
-import { ConfigContext } from '../context/context';
+import { ConfigContext } from '../../context/context';
 
 const Prints = ({ updateUrl, handelStep }) => {
   const location = useLocation();
