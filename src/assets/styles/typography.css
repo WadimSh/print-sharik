@@ -32,7 +32,41 @@
 	font-size: var(--text-xs);
 }
 
-.text_color_primary {
+.text_type_link-menu {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+	font-size: var(--text-s);
+  color: var(--color-text-support);
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.text_type_link-menu div {
+  position: absolute;
+  top: -2px;
+  left: 17px;
+  width: 9px;
+  height: 9px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: var(--color-warning);
+  border: 2px solid var(--color-bg-main);
+}
+
+@media screen and (max-width: 700px) {
+  .text_type_link-menu span {
+    display: none;
+  }
+}
+
+.text_type_animation {
+  transition: var(--animation-transition);
+}
+
+.text_color_primary, .text_type_link-menu:hover {
 	color: var(--color-text-second)
 }
 

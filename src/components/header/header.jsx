@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../ui/logo/logo";
 import { Layout } from "../../ui/icons/layout";
 
 const Header = () => {
+  const [isLogic, setIsLogic] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('options')) {
+      setIsLogic(!isLogic);
+    }
+  }, [isLogic]);
+  
   return(
-    <header className="header">
+    <header className="header flex_space-between main_width">
       <Logo />
-      <NavLink to="/" className={({isActive}) => `text text_type_main-default menu_link ${isActive ? "menu_link_active" : ""}`}>
+      <NavLink to="/options" className={({isActive}) => `text text_type_link-menu text_type_animation ${isActive ? "text_color_primary" : ""}`}>
         <Layout />
         <span>Мои варианты</span>
-        <span className="point"></span>
+        {isLogic && <div></div>}
       </NavLink>
     </header>
   )
