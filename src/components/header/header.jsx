@@ -16,7 +16,7 @@ const Header = () => {
   return(
     <header className="header flex_space-between main_width">
       <Logo />
-      <NavLink to="/options" className={({isActive}) => `text text_type_link-menu text_type_animation ${isActive ? "text_color_primary" : ""}`}>
+      <NavLink to="/options" className={({isActive}) => `text text_type_link-menu text_type_animation ${isActive ? "text_color_primary" : ""}`.trim()}>
         <Layout />
         <span>Мои варианты</span>
         {isLogic && <div></div>}
