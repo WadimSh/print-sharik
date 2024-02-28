@@ -37,13 +37,13 @@ const Dropdown = () => {
         )}
       </div>
       {isDropdownOpen && (
-        <div className="options">
+        <ul className="options">
           {options.map((option, index) => (
-            <button className="button" key={index} onClick={() => handleSelectOption(option)}>
+            <li className="button" key={index} onClick={() => handleSelectOption(option)}>
               {option}
-            </button>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

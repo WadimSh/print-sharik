@@ -17,7 +17,7 @@
 .text_type_main-large {
 	font-family: "Inter", sans-serif;
   font-weight: 600;
-	font-size: var(--text-l);
+	font-size: clamp(0.875rem, 0.3043rem + 3.4783vw, 1.5rem);
 }
 
 .text_type_main-medium {

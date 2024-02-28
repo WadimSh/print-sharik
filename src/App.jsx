@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Main from './components/main/main';
+import Dropdown from './ui/dropdown/dropdown';
 
 const App = () => {
   //const orderId = useId();
@@ -42,7 +43,8 @@ const App = () => {
     <>
       <Header />
       <Main>
-        
+        <h1 className='text_type_main-large'>Коммерческая печать на шарах</h1>
+        <Dropdown />
       </Main>
       <Footer />
     </>
