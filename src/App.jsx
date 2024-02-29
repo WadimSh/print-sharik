@@ -44,7 +44,26 @@ const App = () => {
       <Header />
       <Main>
         <h1 className='text_type_main-large'>Коммерческая печать на шарах</h1>
-        <Dropdown />
+        <form className="search-form" >
+      <div className="material-icons">search</div>
+      <input
+        
+        
+        className="search-form__input"
+        type="text"
+        placeholder="Поиск..."
+        minLength="2"
+        maxLength="200"
+        autoComplete="off"
+        required
+      />
+      <button className="btn-small" type="button" >Найти</button>
+    </form>
+        <div style={{ display: "flex" }}>
+          <Dropdown />
+          <Dropdown />
+        </div>
+        
       </Main>
       <Footer />
     </>

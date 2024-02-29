@@ -26,7 +26,7 @@ const Dropdown = () => {
         {selectedOption ? (
           <span className="selected-value">{selectedOption}</span>
         ) : (
-          <span className="placeholder" onClick={handleToggleDropdown}>
+          <span onClick={handleToggleDropdown}>
             Select an option
           </span>
         )}

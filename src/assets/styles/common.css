@@ -12,7 +12,7 @@
   --color-text-support: #8e95a9;
 
   /* typography vars */
-  --baseTextSize: 0.87rem;
+  --baseTextSize: 0.875rem;
   --textSizeIncrement: 1.24;
   --text-xs: calc(var(--baseTextSize) / var(--textSizeIncrement));
   --text-s: var(--baseTextSize);
@@ -26,19 +26,7 @@
 
   --animation-transition: all .3s ease;
 
-  /* spacing vars */
-  --unit: 0.5rem;
-  --spaceIncrement: 1.2;
-  --space-s: var(--unit);
-  --space-m: calc(var(--space-s) * var(--spaceIncrement));
-  --space-l: calc(var(--space-m) * var(--spaceIncrement));
-  --space-xl: calc(var(--space-l) * var(--spaceIncrement));
-  --space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
-  --space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
-  --space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
-  --textFrameRatio: 2.5;
-  --textFrameY: 0.6em;
-  --textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));
+  
 }
 
 @-moz-document url-prefix() {
@@ -110,6 +98,7 @@ body::-webkit-scrollbar-thumb {
 .flex_column {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   box-sizing: border-box;
 }
 
