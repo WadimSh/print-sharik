@@ -1,3 +1,4 @@
+/*  */
 :root {
   --color-bg-main: #f8f8f8;
   --color-bg-second: #fff;
@@ -67,6 +68,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
+/* style of custom scroll for components */
 .custom-scroll::-webkit-scrollbar {
 	width: 10px;
 }
@@ -108,4 +110,63 @@ body::-webkit-scrollbar-thumb {
 
 .main {
   flex: 1 0 auto;
+}
+
+
+/* dropdown */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 5px;
+}
+
+.dropdown div {
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid #c1c1c1;
+  border-radius: 50px;
+}
+
+.dropdown span {
+  margin-right: 10px;
+}
+
+.dropdown button {
+  transform: rotate(45deg);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown ul {
+  padding: 0;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  border-radius: 20px;
+  border: 1px solid #c1c1c1;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+.dropdown li {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.dropdown li:hover {
+  background: lightgray;
 }

@@ -39,13 +39,19 @@ const App = () => {
   //  localStorage.setItem('initial', JSON.stringify(state));
   //};
 
+  const options = ['Babble', 'Gemar', 'Agora'];
+
   return (
     <>
       <Header />
       <Main>
         <div className='flex_space-between'>
-          <Dropdown />
-          <Dropdown />
+          <Dropdown
+            placeholder='Торговая марка'
+            value='Babbel' 
+            className='dropdown'
+            options={options}
+          />
         </div>
         
       </Main>

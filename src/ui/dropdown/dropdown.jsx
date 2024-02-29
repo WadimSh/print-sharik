@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import './styles.css';
 
-const Dropdown = () => {
-  const options = ['Option 1', 'Option 2', 'Option 3'];
-  const [selectedOption, setSelectedOption] = useState(null);
+const Dropdown = ({ options, placeholder, value, onClick, className }) => {
+  const [selectedOption, setSelectedOption] = useState(value || null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleSelectOption = (option) => {
+    if (onClick) {
+      onClick(option);
+    };    
     setSelectedOption(option);
     setIsDropdownOpen(false);
   };
@@ -21,25 +22,27 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="dropdown-container">
-      <div className="selected-option">
+    <div className={className}>
+      <div>
         {selectedOption ? (
-          <span className="selected-value">{selectedOption}</span>
+          <span>
+            {selectedOption}
+          </span>
         ) : (
           <span onClick={handleToggleDropdown}>
-            Select an option
+            {selectedOption === null ? placeholder : selectedOption}
           </span>
         )}
         {selectedOption && (
-          <button className="remove-option" onClick={handleRemoveOption}>
+          <button onClick={handleRemoveOption}>
             +
           </button>
         )}
       </div>
       {isDropdownOpen && (
-        <ul className="options">
+        <ul>
           {options.map((option, index) => (
-            <li className="button" key={index} onClick={() => handleSelectOption(option)}>
+            <li key={index} onClick={() => handleSelectOption(option)}>
               {option}
             </li>
           ))}

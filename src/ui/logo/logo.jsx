@@ -2,7 +2,7 @@ import React from "react";
 
 import logo from "../../assets/images/logo.png";
 
-const Logo = () => {
+const Logo = ({ image, link, className }) => {
   const logoStyle = {
     width: '96px',
     height: 'auto',
