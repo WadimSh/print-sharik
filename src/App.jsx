@@ -4,6 +4,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Main from './components/main/main';
 import Dropdown from './ui/dropdown/dropdown';
+import TextInput from './ui/input/input';
 
 const App = () => {
   //const orderId = useId();
@@ -48,9 +49,13 @@ const App = () => {
         <div className='flex_space-between'>
           <Dropdown
             placeholder='Торговая марка'
-            value='Babbel' 
+            value={options[0]} 
             className='dropdown'
             options={options}
+          />
+          <TextInput 
+            label="input"
+            value='go'
           />
         </div>
         

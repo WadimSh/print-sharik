@@ -112,6 +112,13 @@ body::-webkit-scrollbar-thumb {
   flex: 1 0 auto;
 }
 
+.logo {
+  width: 96px;
+  height: auto;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: top;
+}
 
 /* dropdown */
 .dropdown {

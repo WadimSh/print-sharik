@@ -3,22 +3,15 @@ import React from "react";
 import logo from "../../assets/images/logo.png";
 
 const Logo = ({ image, link, className }) => {
-  const logoStyle = {
-    width: '96px',
-    height: 'auto',
-    cursor: 'pointer',
-    margin: '10px'
-  };
-
   const handleLogoClick = () => {
-    window.open('https://new.sharik.ru/', '_blank');
+    window.open(link, '_blank');
   };
 
   return (
     <img 
-      src={logo} 
-      alt="Company logo" 
-      style={logoStyle} 
+      src={image || logo} 
+      alt="company logo"
+      className={className}
       onClick={handleLogoClick} 
     />
   );

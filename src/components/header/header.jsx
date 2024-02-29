@@ -15,7 +15,10 @@ const Header = () => {
   
   return(
     <header className="header flex_space-between main_width">
-      <Logo />
+      <Logo 
+        link='https://new.sharik.ru/'
+        className='logo'      
+      />
       <NavLink to="/options" className={({isActive}) => `text text_type_link-menu text_type_animation ${isActive ? "text_color_primary" : ""}`.trim()}>
         <Layout />
         <span>Мои варианты</span>
