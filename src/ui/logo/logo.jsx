@@ -1,15 +1,15 @@
 import React from "react";
 
-import logo from "../../assets/images/logo.png";
-
 const Logo = ({ image, link, className }) => {
+  const src = window.location.origin + image;
+
   const handleLogoClick = () => {
     window.open(link, '_blank');
   };
 
   return (
     <img 
-      src={image || logo} 
+      src={src} 
       alt="company logo"
       className={className}
       onClick={handleLogoClick} 

@@ -118,6 +118,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   object-fit: cover;
   object-position: top;
+  margin: 5px 0;
 }
 
 /* dropdown */

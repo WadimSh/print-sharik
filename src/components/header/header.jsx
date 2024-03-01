@@ -16,6 +16,7 @@ const Header = () => {
   return(
     <header className="header flex_space-between main_width">
       <Logo 
+        image='/images/logo.png'
         link='https://new.sharik.ru/'
         className='logo'      
       />

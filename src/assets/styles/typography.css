@@ -37,7 +37,7 @@
   font-weight: 600;
 	font-size: var(--text-s);
   color: var(--color-text-support);
-  text-decoration: none;
+  text-decoration: solid;
   position: relative;
   display: flex;
   align-items: center;
