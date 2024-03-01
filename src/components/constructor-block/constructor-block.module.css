@@ -1,6 +1,0 @@
-.wrapper {
-  flex-grow: 1;
-  display: flex;
-  gap: var(--spacing-24);
-  padding: var(--spacing-12) 0;
-}
