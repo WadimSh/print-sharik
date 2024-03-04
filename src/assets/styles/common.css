@@ -83,6 +83,36 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 6px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: clamp(8px, 3vw, 20px);
+}
+
+.item-container {
+  grid-column: span var(--xs);
+  display: flex;
+}
+
+@media screen and (min-width: 960px) {
+  .item-container {
+    grid-column: span var(--md);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .item-container {
+    grid-column: span var(--lg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .item-container {
+    grid-column: span var(--xl);
+  }
+}
+
+
 .flex_space-between {
   display: flex;
   align-items: center;
