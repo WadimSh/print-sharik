@@ -13,7 +13,7 @@ export const useFetch = (url) => {
     fetch(url)
       .then((res) => res.json())
       .then((respData) => {
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled) setData(respData);
       })
       .catch((e) => {
         if (!cancelled) setError(e);
