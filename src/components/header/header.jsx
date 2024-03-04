@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../ui/logo/logo";
@@ -20,7 +20,10 @@ const Header = () => {
         link='https://new.sharik.ru/'
         className='logo'      
       />
-      <NavLink to="/options" className={({isActive}) => `text text_type_link-menu text_type_animation ${isActive ? "text_color_primary" : ""}`.trim()}>
+      <NavLink 
+        to="/options" 
+        className={({isActive}) => `text text_type_link-menu text_type_animation ${isActive ? "text_color_primary" : ""}`.trim()}
+      >
         <Layout />
         <span>Мои варианты</span>
         {isLogic && <div></div>}

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Container = ({ className, tag, children }) => {
+const Container = ({ className, tag, children, ...rest }) => {
   const Tag = tag || 'div';
 
   return (
-    <Tag className={className}>
+    <Tag className={className} {...rest}>
       {children}
     </Tag>
   );
