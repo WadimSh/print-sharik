@@ -3,9 +3,9 @@ import React from 'react';
 const Button = ({ className, buttonText, buttonType, leftIcon, rightIcon, onClick, ...rest }) => {
   return (
     <button className={className} type={buttonType} onClick={onClick} {...rest}>
-      {leftIcon && <span>{leftIcon}</span>}
+      {leftIcon && <div>{leftIcon}</div>}
       <span>{buttonText}</span>
-      {rightIcon && <span>{rightIcon}</span>}
+      {rightIcon && <div>{rightIcon}</div>}
     </button>
   );
 };

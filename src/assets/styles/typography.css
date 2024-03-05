@@ -29,7 +29,7 @@
 .text_type_second-medium {
   font-family: var(--fontFamily);
   font-weight: 600;
-  font-size: clamp(var(--text-m), 0.3043rem + 3.4783vw, var(--text-l));
+  font-size: clamp(var(--text-s), 0.3043rem + 3.4783vw, var(--text-m));
 }
 
 .text_type_main-small {
@@ -60,6 +60,10 @@
 
 .text_color_success {
 	color: var(--color-success)
+}
+
+.text_color_white {
+  color: var(--color-bg-second);
 }
 
 .noselect {

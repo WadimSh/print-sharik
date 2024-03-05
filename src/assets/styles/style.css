@@ -7,7 +7,80 @@
   margin: 16px 0;
 }
 
+.button {
+  padding: 8px 24px;
+  border-radius: 0 2px 2px 0;
+}
 
+.button div {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    padding: 4px 8px;
+  }
+
+  .button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button span {
+    display: none;
+  }
+}
+
+.button_primary {
+  border: none;
+  background-color: var(--color-accent-main);
+  color: var(--color-bg-second);
+  transition: all .3s;
+}
+
+.button_primary:hover {
+  opacity: .9;
+  color: var(--color-bg-main);
+  box-shadow: 0 3px 5px 0 var(--color-accent-main);
+  transition: all .3s;
+}
+
+.button_primary:active {
+  box-shadow: none;
+  transform: scale(0.99);
+  transition: all .3s;
+}
+
+.form {
+  border: 2px solid var(--color-accent-main);
+  border-radius: 4px;
+  width: var(--main-width);
+  gap: 8px;
+}
+
+.input {
+  display: flex;
+  padding-left: 8px;
+  width: 100%;
+}
+
+.input input {
+  border: none;
+  width: 100%;
+  background-color: var(--color-bg-main);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.input input::placeholder {
+  color: var(--color-text-support);
+}
 
 /*
 

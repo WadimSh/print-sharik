@@ -21,6 +21,7 @@
 .flex_row {
   display: flex;
   align-items: center;
+  gap: 8px;
   box-sizing: border-box;
 }
 
@@ -36,4 +37,10 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+}
+
+.borders {
+  border: 1px solid var(--color-decor);
+  border-radius: 8px;
+  padding: 8px;
 }
