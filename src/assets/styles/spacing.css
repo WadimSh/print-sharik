@@ -1,4 +1,0 @@
-.main_width {
-  width: clamp(19.375rem, 3.196rem + 80.893vw, 76rem);
-  max-width: 1216px;
-}

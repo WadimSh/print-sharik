@@ -1,33 +1,36 @@
-/*  */
+/* constants of project */
 :root {
+  /* colors constants */
   --color-bg-main: #f8f8f8;
   --color-bg-second: #fff;
-  --color-bg-support: #cdd1de;
   --color-accent-main: #396ec4;
-  --color-accent-second: #2f80ed;
+
+  --color-decor: #cdd1de;
   --color-success: #279f51;
   --color-warning: #ffa000;
   --color-error: #ff392b;
+  
   --color-text-main: #1c2a53;
   --color-text-second: #555f7e;
   --color-text-support: #8e95a9;
 
-  /* typography vars */
+  /* typography constants */
+  --fontFamily: "Inter", sans-serif;
+
   --baseTextSize: 0.875rem;
   --textSizeIncrement: 1.24;
+
   --text-xs: calc(var(--baseTextSize) / var(--textSizeIncrement));
   --text-s: var(--baseTextSize);
   --text-m: calc(var(--text-s) * var(--textSizeIncrement));
   --text-l: calc(var(--text-m) * var(--textSizeIncrement));
-  --text-xl: calc(var(--text-l) * var(--textSizeIncrement));
+  
   --lineHeightFixedAmount: 0.35rem;
   --lineHeightRelativeAmount: 1.1em;
   --globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
-  --fontFamily: "Inter", sans-serif;
-
-  --animation-transition: all .3s ease;
-
   
+  /* layouts constants */
+  --main-width: clamp(18.75rem, 1.964rem + 83.929vw, 77.5rem)
 }
 
 @-moz-document url-prefix() {
@@ -36,6 +39,7 @@
 	}
 }
 
+/* global styles */
 body {
 	padding: 0;
 	margin: 0;
@@ -81,181 +85,4 @@ body::-webkit-scrollbar-thumb {
 	background: var(--color-bg-support);
 	border: 1px solid var(--color-bg-main);
 	border-radius: 6px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: clamp(8px, 3vw, 20px);
-}
-
-.item-container {
-  grid-column: span var(--xs);
-  display: flex;
-}
-
-@media screen and (min-width: 960px) {
-  .item-container {
-    grid-column: span var(--md);
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .item-container {
-    grid-column: span var(--lg);
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .item-container {
-    grid-column: span var(--xl);
-  }
-}
-
-
-.flex_space-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-
-.flex_center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.flex_column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.header, .footer {
-  flex: 0 0 auto;
-}
-
-.main {
-  flex: 1 0 auto;
-}
-
-.logo {
-  width: 96px;
-  height: auto;
-  cursor: pointer;
-  object-fit: cover;
-  object-position: top;
-  margin: 5px 0;
-}
-
-/* dropdown */
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 5px;
-}
-
-.dropdown div {
-  display: flex;
-  justify-content: center;
-  padding: 10px 20px;
-  border: 1px solid #c1c1c1;
-  border-radius: 50px;
-}
-
-.dropdown span {
-  margin-right: 10px;
-}
-
-.dropdown button {
-  transform: rotate(45deg);
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.dropdown ul {
-  padding: 0;
-  position: absolute;
-  top: 35px;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  border-radius: 20px;
-  border: 1px solid #c1c1c1;
-  background-color: #f8f8f8;
-  overflow: hidden;
-}
-
-.dropdown li {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.dropdown li:hover {
-  background: lightgray;
-}
-
-/**/
-.print {
-  position: absolute;
-  margin-inline: auto;
-  inset-inline: 0;
-  inset-block-start: 50%;
-  transform: translateY(-60%);
-  width: 48%;
-  object-fit: contain;
-}
-
-.white {
-  filter: invert(100%) sepia(1%) saturate(2512%) hue-rotate(178deg) brightness(114%) contrast(100%);
-}
-
-.green {
-  filter: invert(50%) sepia(55%) saturate(562%) hue-rotate(88deg) brightness(90%) contrast(92%);
-}
-
-.yellow {
-  filter: invert(92%) sepia(11%) saturate(5968%) hue-rotate(359deg) brightness(104%) contrast(103%);
-}
-
-.orange {
-  filter: invert(43%) sepia(98%) saturate(694%) hue-rotate(7deg) brightness(105%) contrast(101%);
-}
-
-.blue {
-  filter: invert(41%) sepia(52%) saturate(999%) hue-rotate(182deg) brightness(88%) contrast(83%);
-}
-
-.violet {
-  filter: invert(8%) sepia(94%) saturate(5230%) hue-rotate(296deg) brightness(97%) contrast(107%);
-}
-
-.golden {
-  filter: invert(79%) sepia(78%) saturate(367%) hue-rotate(333deg) brightness(102%) contrast(93%);
-}
-
-.silver {
-  filter: invert(95%) sepia(0%) saturate(6677%) hue-rotate(187deg) brightness(80%) contrast(98%);
-}
-
-.red {
-  filter: invert(25%) sepia(85%) saturate(7488%) hue-rotate(356deg) brightness(107%) contrast(118%);
-}
-
-.black {
-  filter: invert(0%) sepia(0%) saturate(30%) hue-rotate(70deg) brightness(94%) contrast(106%);
 }

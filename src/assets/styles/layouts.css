@@ -1,0 +1,39 @@
+.main_width {
+  width: var(--main-width);
+  max-width: 1240px;
+}
+
+.header, .footer {
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.flex_row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.flex_space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}

@@ -14,7 +14,6 @@
         "name": "Цвет печати",
         "relation": "",
         "defaultValue": "black",
-        "value": "",
         "options": ["white", "green", "yellow", "orange", "blue", "violet", "golden", "silver", "red", "black"],
         "type": "color"
       },
@@ -23,7 +22,6 @@
         "name": "Количество сторон печати",
         "relation": "",
         "defaultValue": "Печать с одной стороны",
-        "value": "",
         "options": ["Печать с одной стороны", "Печать с двух сторон", "Печать с четырех сторон"],
         "type": "select"
       }
@@ -34,16 +32,14 @@
         "name": "Торговая марка",
         "relation": "",
         "defaultValue": "Belbal",
-        "value": "",
         "options": ["Belbal", "Gemar"],
         "type": "select"
       },
       {
         "id": 2,
-        "name": "Тип шара",
+        "name": "Тип цвета шара",
         "relation": "Belbal",
         "defaultValue": "Кристалл",
-        "value": "",
         "options": ["Кристалл", "Пастель", "Хром"],
         "type": "select"
       },
@@ -52,7 +48,6 @@
         "name": "Тип шара",
         "relation": "Gemar",
         "defaultValue": "Кристалл",
-        "value": "",
         "options": ["Кристалл", "Пастель", "Металлик"],
         "type": "select"
       }
