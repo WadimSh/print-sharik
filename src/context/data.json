@@ -52,6 +52,221 @@
         "type": "select"
       }
     ]
+  },
+  {
+    "id": 2,
+    "image": "/images/1103-3001_d2.png",
+    "description": "Шары из натурального латекса c шелкографическим рисунком одного цвета, расположенным по всему шару. Все шары одного дизайна. Тип шара кристалл - полупрозрачный. Все шары красного цвета. Предназначенны для использования в розничной продаже как в надутом, так и в не надутом виде, а также для оформления торжеств свадебной тематики.",
+    "code": "1103-3001",
+    "category": "Halloween",
+    "price": 10.8,
+    "currency": "RUB",
+    "size": { "inch": 14, "sm": 35.6 },
+    "properties": [
+      {
+        "id": 1,
+        "name": "Цвет печати",
+        "relation": "",
+        "defaultValue": "black",
+        "options": ["white", "green", "yellow", "orange", "blue", "violet", "golden", "silver", "red", "black"],
+        "type": "color"
+      },
+      {
+        "id": 2,
+        "name": "Количество сторон печати",
+        "relation": "",
+        "defaultValue": "Печать с одной стороны",
+        "options": ["Печать с одной стороны", "Печать с двух сторон", "Печать с четырех сторон"],
+        "type": "select"
+      }
+    ],
+    "materials": [
+      {
+        "id": 1,
+        "name": "Торговая марка",
+        "relation": "",
+        "defaultValue": "Belbal",
+        "options": ["Belbal", "Gemar"],
+        "type": "select"
+      },
+      {
+        "id": 2,
+        "name": "Тип цвета шара",
+        "relation": "Belbal",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Хром"],
+        "type": "select"
+      },
+      {
+        "id": 3,
+        "name": "Тип шара",
+        "relation": "Gemar",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Металлик"],
+        "type": "select"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "/images/1103-3001_d3.png",
+    "description": "Шары из натурального латекса c шелкографическим рисунком одного цвета, расположенным по всему шару. Все шары одного дизайна. Тип шара кристалл - полупрозрачный. Все шары красного цвета. Предназначенны для использования в розничной продаже как в надутом, так и в не надутом виде, а также для оформления торжеств свадебной тематики.",
+    "code": "1103-3023",
+    "category": "День метлы",
+    "price": 11.8,
+    "currency": "RUB",
+    "size": { "inch": 16, "sm": 48.5 },
+    "properties": [
+      {
+        "id": 1,
+        "name": "Цвет печати",
+        "relation": "",
+        "defaultValue": "black",
+        "options": ["white", "green", "yellow", "orange", "blue", "violet", "golden", "silver", "red", "black"],
+        "type": "color"
+      },
+      {
+        "id": 2,
+        "name": "Количество сторон печати",
+        "relation": "",
+        "defaultValue": "Печать с одной стороны",
+        "options": ["Печать с одной стороны", "Печать с двух сторон"],
+        "type": "select"
+      }
+    ],
+    "materials": [
+      {
+        "id": 1,
+        "name": "Торговая марка",
+        "relation": "",
+        "defaultValue": "Belbal",
+        "options": ["Belbal", "Gemar"],
+        "type": "select"
+      },
+      {
+        "id": 2,
+        "name": "Тип цвета шара",
+        "relation": "Belbal",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Хром"],
+        "type": "select"
+      },
+      {
+        "id": 3,
+        "name": "Тип шара",
+        "relation": "Gemar",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Металлик"],
+        "type": "select"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "/images/1103-3001_d1.png",
+    "description": "Шары из натурального латекса c шелкографическим рисунком одного цвета, расположенным по всему шару. Все шары одного дизайна. Тип шара кристалл - полупрозрачный. Все шары красного цвета. Предназначенны для использования в розничной продаже как в надутом, так и в не надутом виде, а также для оформления торжеств свадебной тематики.",
+    "code": "1103-3023",
+    "category": "День метлы",
+    "price": 11.8,
+    "currency": "RUB",
+    "size": { "inch": 16, "sm": 48.5 },
+    "properties": [
+      {
+        "id": 1,
+        "name": "Цвет печати",
+        "relation": "",
+        "defaultValue": "black",
+        "options": ["white", "green", "yellow", "orange", "blue", "violet", "golden", "silver", "red", "black"],
+        "type": "color"
+      },
+      {
+        "id": 2,
+        "name": "Количество сторон печати",
+        "relation": "",
+        "defaultValue": "Печать с одной стороны",
+        "options": ["Печать с одной стороны", "Печать с двух сторон"],
+        "type": "select"
+      }
+    ],
+    "materials": [
+      {
+        "id": 1,
+        "name": "Торговая марка",
+        "relation": "",
+        "defaultValue": "Belbal",
+        "options": ["Belbal", "Gemar"],
+        "type": "select"
+      },
+      {
+        "id": 2,
+        "name": "Тип цвета шара",
+        "relation": "Belbal",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Хром"],
+        "type": "select"
+      },
+      {
+        "id": 3,
+        "name": "Тип шара",
+        "relation": "Gemar",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Металлик"],
+        "type": "select"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "/images/1103-3001_d2.png",
+    "description": "Шары из натурального латекса c шелкографическим рисунком одного цвета, расположенным по всему шару. Все шары одного дизайна. Тип шара кристалл - полупрозрачный. Все шары красного цвета. Предназначенны для использования в розничной продаже как в надутом, так и в не надутом виде, а также для оформления торжеств свадебной тематики.",
+    "code": "1203-3008",
+    "category": "День метлы",
+    "price": 14,
+    "currency": "RUB",
+    "size": { "inch": 14, "sm": 32.5 },
+    "properties": [
+      {
+        "id": 1,
+        "name": "Цвет печати",
+        "relation": "",
+        "defaultValue": "black",
+        "options": ["white", "green", "yellow", "orange", "blue", "violet", "golden", "silver", "red", "black"],
+        "type": "color"
+      },
+      {
+        "id": 2,
+        "name": "Количество сторон печати",
+        "relation": "",
+        "defaultValue": "Печать с одной стороны",
+        "options": ["Печать с одной стороны", "Печать с двух сторон"],
+        "type": "select"
+      }
+    ],
+    "materials": [
+      {
+        "id": 1,
+        "name": "Торговая марка",
+        "relation": "",
+        "defaultValue": "Belbal",
+        "options": ["Belbal", "Gemar"],
+        "type": "radiogroup"
+      },
+      {
+        "id": 2,
+        "name": "Тип цвета шара",
+        "relation": "Belbal",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Хром"],
+        "type": "select"
+      },
+      {
+        "id": 3,
+        "name": "Тип шара",
+        "relation": "Gemar",
+        "defaultValue": "Кристалл",
+        "options": ["Кристалл", "Пастель", "Металлик"],
+        "type": "select"
+      }
+    ]
   }
-
 ]}

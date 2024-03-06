@@ -3,19 +3,16 @@ import React from "react";
 
 import Header from "./components/global/header/header";
 import Footer from "./components/global/footer/footer";
-
-import SearchForm from "./components/search-form";
+import PrintSelector from "./pages/print-selector/print-selector";
 
 import { config, ConfigContext } from "./context/config-context";
 
 const App = () => {
-
+  
   return (
     <ConfigContext.Provider value={config}>
       <Header />
-      
-      <SearchForm />
-
+      <PrintSelector />
       <Footer />
     </ConfigContext.Provider>
   );

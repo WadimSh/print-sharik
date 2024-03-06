@@ -13,7 +13,6 @@ const Input = ({ type, placeholder, className, error, ...props }) => {
         {...props} />
       {value && <button 
         onClick={() => setValue("")}
-        style={{ border: 'none', backgroundColor: 'transparent', transform: 'rotate(45deg)', fontSize: "1.5rem" }}
       >+</button>}
       {error && <span>{error}</span>}
     </div>

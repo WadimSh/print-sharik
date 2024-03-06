@@ -55,17 +55,31 @@
 .form {
   border: 2px solid var(--color-accent-main);
   border-radius: 4px;
-  width: var(--main-width);
+  width: clamp(18.75rem, 9.821rem + 44.643vw, 50rem);
   gap: 8px;
+  position: relative;
+}
+
+.search {
+  border: 2px solid var(--color-bg-main);
+  border-radius: 4px;
+  background-color: var(--color-bg-second);
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 41px;
 }
 
 .input {
   display: flex;
+  box-sizing: border-box;
   padding-left: 8px;
   width: 100%;
 }
 
 .input input {
+  padding: 0;
   border: none;
   width: 100%;
   background-color: var(--color-bg-main);
@@ -80,6 +94,13 @@
 
 .input input::placeholder {
   color: var(--color-text-support);
+}
+
+.input button {
+  border: none;
+  background-color: transparent;
+  transform: rotate(45deg);
+  font-size: 1.2rem;
 }
 
 /*
