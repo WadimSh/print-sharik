@@ -1,7 +1,7 @@
 const useSorts = (prints, categoryField, codeField) => {
   const sorted = {};
   
-  prints.map(print => {
+  prints.forEach(print => {
     const category = print[categoryField];
     const code = print[codeField];
     sorted[category] = {
