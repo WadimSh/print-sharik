@@ -6,24 +6,29 @@ import Input from "../ui/input/input";
 import Button from "../ui/button/button";
 import Title from "../ui/title/title";
 import Paragraph from "../ui/paragraph/paragraph";
+
 import { Search } from "../ui/icons/search";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const SearchForm = () => {
   const [logic, setLogic] = useState(false);
   const config = useContext(ConfigContext);
   const sorted  = useSorts(config, 'category', 'code');
-  console.log(sorted)
+  
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setLogic(false);
+    
   }
 
   const handleOnClick = () => {
     setLogic(!logic);
+    
   }
 
   const text = ["Этот текст служит только для демонстрации и не более того."];
-
+  
   return (
     <>
       <Title
