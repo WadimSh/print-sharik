@@ -36,7 +36,7 @@ const defaultOAuthSignInPlaceHolder = (
 }
 
 const AuthContext = createContext<Auth>({
-    authenticated: false,
+    authenticated: true,
     user: {},
     signIn: async () => defaultFunctionPlaceHolder(),
     signUp: async () => defaultFunctionPlaceHolder(),
