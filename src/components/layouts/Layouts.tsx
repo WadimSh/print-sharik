@@ -19,13 +19,11 @@ const Layout = ({ children }: CommonProps) => {
                 </div>
             }
         >
-            {authenticated ? (
+            
                 <PostLoginLayout layoutType={layoutType}>
                     {children}
                 </PostLoginLayout>
-            ) : (
-                <PreLoginLayout>{children}</PreLoginLayout>
-            )}
+           
         </Suspense>
     )
 }

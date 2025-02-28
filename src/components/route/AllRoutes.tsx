@@ -19,11 +19,33 @@ type AllRoutesProps = ViewsProps
 const { authenticatedEntryPath } = appConfig
 
 const AllRoutes = (props: AllRoutesProps) => {
-    const { user } = useAuth()
+    // const { user } = useAuth()
 
     return (
         <Routes>
-            <Route path="/" element={<ProtectedRoute />}>
+            <Route
+                    path="/"
+                    element={<Navigate replace to='/home' />}
+                />
+            {protectedRoutes.map((route, index) => (
+                    <Route
+                        key={route.key + index}
+                        path={route.path}
+                        element={
+                            
+                                <PageContainer {...props} {...route.meta}>
+                                    <AppRoute
+                                        routeKey={route.key}
+                                        component={route.component}
+                                        {...route.meta}
+                                    />
+                                </PageContainer>
+                            
+                        }
+                    />
+                ))}
+            <Route path="*" element={<Navigate replace to="/" />} />    
+            {/* <Route path="/" element={<ProtectedRoute />}>
                 <Route
                     path="/"
                     element={<Navigate replace to={authenticatedEntryPath} />}
@@ -64,7 +86,7 @@ const AllRoutes = (props: AllRoutesProps) => {
                         }
                     />
                 ))}
-            </Route>
+            </Route>*/}
         </Routes>
     )
 }
