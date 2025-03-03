@@ -111,11 +111,11 @@ const ContentOverlay = ({ children }: CommonProps) => {
                         headerMiddle={<>{larger.lg && <HorizontalNav />}</>}
                         headerEnd={
                             <>
-                                <UserProfileDropdown hoverable={false} />
-                            </>
+                               {/*  <UserProfileDropdown hoverable={false} /> */}
+                            </> 
                         }
                     />
-                    <div className="h-[400px] bg-[linear-gradient(220deg,_rgb(9,_12,_17)_10%,_#15122f_35%,_#2b1e38_55%,_#0c2239_70%,_rgb(9,_12,_17)_90%)]">
+                    <div className="h-[400px] bg-[linear-gradient(to_bottom,_#8990ED,_#F5F5F5)]">
                         <div className="container mx-auto h-full"></div>
                     </div>
                     {children}
