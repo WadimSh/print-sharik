@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import AllRoutes from '../route/AllRoutes';
+// import ImageGenerator from './ImageGenerator';
 
 const Views = () => {
 
