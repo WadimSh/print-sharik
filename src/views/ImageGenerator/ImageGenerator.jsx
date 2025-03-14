@@ -17,8 +17,9 @@ const ImageGenerator = () => {
       src: ''
     }
   ]);
-
+  const currentDate = new Date();
   const [newElement, setNewElement] = useState({
+    id: currentDate,
     type: 'text',
     content: 'Новый текст',
     color: '#000000',
@@ -68,7 +69,6 @@ const ImageGenerator = () => {
       reader.readAsDataURL(file);
     }
   };
-
 
   const handleDownload = async () => {
     try {

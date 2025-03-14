@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const DraggableElement = ({ children, position, onDrag, containerWidth, containerHeight }) => {
+const DraggableElement = ({ id, children, position, onDrag, containerWidth, containerHeight, onSelect, isSelected }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const elementRef = useRef(null);
@@ -18,6 +18,7 @@ const DraggableElement = ({ children, position, onDrag, containerWidth, containe
     });
 
     setIsDragging(true);
+    onSelect(); // Вызываем обработчик выбора элемента
   };
 
   const handleMouseMove = (e) => {
@@ -62,6 +63,7 @@ const DraggableElement = ({ children, position, onDrag, containerWidth, containe
   return (
     <div
       ref={elementRef}
+      data-id={id} // Добавляем data-id
       style={{
         position: 'absolute',
         left: `${position.x}px`,
