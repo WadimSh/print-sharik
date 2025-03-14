@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import html2canvas from 'html2canvas';
 import CaptureContainer from '../../components/shared/CaptureContainer';
+import RemoveBackgrounds from '../../components/shared/RemoveBackground';
 
 const ImageGenerator = () => {
   const captureRef = useRef(null);
@@ -86,7 +87,7 @@ const ImageGenerator = () => {
       alert('Ошибка при генерации изображения!');
     }
   };
-
+  
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial' }}>
       <div style={{ 
@@ -204,6 +205,7 @@ const ImageGenerator = () => {
           Скачать дизайн
         </button>
       </div>
+      <RemoveBackgrounds />
     </div>
   );
 };
